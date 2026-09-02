@@ -1,1 +1,125 @@
+/* OliStudio — shared styles */
 
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #F6F3EC;
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #211F19;
+}
+
+a { color: #211F19; text-decoration: none; }
+a:hover { color: #4F5B34; }
+
+img { max-width: 100%; display: block; }
+
+.disp { font-family: 'Bodoni Moda', Georgia, serif; }
+
+.lbl {
+  font-family: 'Space Mono', ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wrap { max-width: 1320px; margin: 0 auto; }
+
+/* Placeholder photo blocks — swap these for real <img> tags as you shoot */
+.ph {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.ph .cap {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #F6F3EC;
+  background: rgba(30, 28, 22, 0.55);
+  padding: 5px 10px;
+  margin: 12px;
+}
+
+/* Nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 64px;
+  border-bottom: 1px solid rgba(33, 31, 25, 0.12);
+}
+.site-nav .wordmark { font-size: 22px; font-weight: 600; letter-spacing: 0.01em; }
+.site-nav .links { display: flex; gap: 40px; align-items: center; }
+.site-nav .links a { font-size: 14px; }
+.site-nav .links a.current { color: #4F5B34; border-bottom: 1px solid #4F5B34; padding-bottom: 2px; }
+
+/* Buttons / links */
+.btn-primary {
+  background: #4F5B34;
+  color: #F6F3EC;
+  padding: 13px 26px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Work Sans', sans-serif;
+}
+.link-underline { font-size: 14px; border-bottom: 1px solid #211F19; }
+
+/* Sections */
+.section { padding: 88px 64px; }
+.section-tint { background: #EFEBE0; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+}
+
+/* Grids */
+.grid-2 { display: flex; gap: 20px; max-width: 980px; margin: 0 auto; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+
+/* Cards */
+.card { display: flex; flex-direction: column; gap: 12px; }
+.card h3 { font-size: 17px; font-weight: 600; margin: 0; line-height: 1.35; }
+.card p { font-size: 14px; color: #4A4739; margin: 0; line-height: 1.55; }
+.card .place-tag { font-size: 11px; color: #6E6A58; }
+
+/* Quote band */
+.quote-band {
+  padding: 88px 64px;
+  background: #4F5B34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+.quote-band p {
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.5;
+  color: #F6F3EC;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* Footer */
+.site-footer { padding: 72px 64px 40px; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.site-footer .col { display: flex; flex-direction: column; gap: 10px; }
+.site-footer .col-label { font-size: 11px; color: #6E6A58; margin-bottom: 4px; }
+.footer-bottom { padding: 20px 64px 32px; border-top: 1px solid rgba(33, 31, 25, 0.12); font-size: 11.5px; color: #6E6A58; }
+
+@media (max-width: 900px) {
+  .site-nav, .section, .site-footer, .footer-bottom { padding-left: 24px; padding-right: 24px; }
+  .site-nav .links { gap: 20px; }
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2 { flex-direction: column; }
+  .site-footer { flex-direction: column; gap: 32px; }
+}
