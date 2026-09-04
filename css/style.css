@@ -81,6 +81,19 @@ img { max-width: 100%; display: block; }
 }
 .link-underline { font-size: 14px; border-bottom: 1px solid #211F19; }
 
+.btn-invert {
+  background: #F6F3EC;
+  color: #211F19;
+  padding: 13px 26px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Work Sans', sans-serif;
+}
+
 /* Sections */
 .section { padding: 88px 64px; }
 .section-tint { background: #EFEBE0; }
